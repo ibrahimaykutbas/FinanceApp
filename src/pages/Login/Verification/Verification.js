@@ -3,6 +3,10 @@ import {View, Text, TouchableOpacity} from 'react-native';
 
 import Back from '../../../icons/back.svg';
 import Help from '../../../icons/help.svg';
+import Finger from '../../../icons/finger.svg';
+
+import TopBar from '../../../components/TopBar/TopBar';
+import Numbers from '../../../components/Numbers/Numbers';
 
 import styles from './Verification.style';
 
@@ -11,12 +15,13 @@ const Verification = ({navigation}) => {
     navigation.goBack();
   };
 
+  const goNext = () => {
+    navigation.navigate('InformationScreen');
+  };
+
   return (
     <View style={styles.container}>
-      <View style={styles.topBar}>
-        <Back onPress={() => goBack()} />
-        <Help />
-      </View>
+      <TopBar onPress={() => goBack()} />
       <View style={styles.header}>
         <Text style={styles.title}>Verification</Text>
         <Text style={styles.content}>
@@ -35,28 +40,7 @@ const Verification = ({navigation}) => {
       <TouchableOpacity>
         <Text style={styles.resendCode}>Resend Code</Text>
       </TouchableOpacity>
-      <View style={styles.numberContainer}>
-        <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
-          <Text style={styles.number}>1</Text>
-          <Text style={styles.number}>2</Text>
-          <Text style={styles.number}>3</Text>
-        </View>
-        <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
-          <Text style={styles.number}>4</Text>
-          <Text style={styles.number}>5</Text>
-          <Text style={styles.number}>6</Text>
-        </View>
-        <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
-          <Text style={styles.number}>7</Text>
-          <Text style={styles.number}>8</Text>
-          <Text style={styles.number}>9</Text>
-        </View>
-        <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
-          <Text style={styles.number}>*</Text>
-          <Text style={styles.number}>0</Text>
-          <Back />
-        </View>
-      </View>
+      <Numbers onPress={() => goNext()} />
     </View>
   );
 };

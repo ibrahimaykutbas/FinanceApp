@@ -1,9 +1,10 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, ScrollView} from 'react-native';
 
 import Back from '../../../icons/back.svg';
 import Help from '../../../icons/help.svg';
 
+import TopBar from '../../../components/TopBar/TopBar';
 import Button from '../../../components/Button/Button';
 import Input from '../../../components/Input/Input';
 
@@ -20,10 +21,7 @@ const Register = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.topBar}>
-        <Back onPress={() => goBack()} />
-        <Help />
-      </View>
+      <TopBar onPress={() => goBack()} />
       <View style={styles.innerContainer}>
         {/* Üst Kısım */}
         <View style={styles.contentContainer}>
