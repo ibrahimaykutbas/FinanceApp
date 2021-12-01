@@ -7,7 +7,11 @@ import Numbers from '../../../components/Numbers/Numbers';
 
 import styles from './Pin.style';
 
-const Pin = () => {
+const Pin = ({navigation}) => {
+  const goNext = () => {
+    navigation.navigate('HomeScreen');
+  };
+
   return (
     <View style={styles.container}>
       <View
@@ -31,7 +35,7 @@ const Pin = () => {
       <TouchableOpacity>
         <Text style={styles.reset}>RESET PIN</Text>
       </TouchableOpacity>
-      <Numbers theme="secondary" />
+      <Numbers theme="secondary" onPress={() => goNext()} />
     </View>
   );
 };

@@ -3,14 +3,16 @@ import {View, Text} from 'react-native';
 
 import Back from '../../icons/back.svg';
 import Help from '../../icons/help.svg';
+import Menu from '../../icons/verticalMenu.svg';
 
 import styles from './TopBar.style';
 
-const TopBar = ({onPress}) => {
+const TopBar = ({title, onPress, page = 'login'}) => {
   return (
     <View style={styles.container}>
       <Back onPress={onPress} />
-      <Help />
+      {title && <Text style={styles.title}>{title}</Text>}
+      {page === 'cardCenter' ? <Menu /> : <Help />}
     </View>
   );
 };

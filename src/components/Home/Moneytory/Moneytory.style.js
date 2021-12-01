@@ -1,0 +1,71 @@
+import {StyleSheet} from 'react-native';
+
+export default StyleSheet.create({
+  container: {
+    minHeight: 170,
+    backgroundColor: '#FFFFFF',
+    marginHorizontal: 20,
+    borderRadius: 16,
+    padding: 20,
+  },
+  type: {
+    fontSize: 16,
+    color: '#000000',
+    fontWeight: '400',
+  },
+  date: {
+    fontSize: 14,
+    color: '#717E95',
+    fontWeight: '400',
+    marginTop: 4,
+  },
+  money: {
+    fontSize: 20,
+    color: '#000000',
+    fontWeight: '500',
+    marginTop: 12,
+  },
+  orange: {
+    minWidth: 87,
+    height: 27,
+    backgroundColor: '#F86F34',
+    borderRadius: 50,
+    marginRight: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+  },
+  blue: {
+    minWidth: 87,
+    height: 27,
+    backgroundColor: '#005CEE',
+    borderRadius: 50,
+    marginRight: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+  },
+  gray: {
+    minWidth: 87,
+    height: 27,
+    backgroundColor: '#94A0B4',
+    borderRadius: 50,
+    marginRight: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+  },
+  text: {
+    fontSize: 12,
+    color: '#FFFFFF',
+    fontWeight: '400',
+  },
+  line: {
+    height: 1,
+    backgroundColor: '#EEF2F8',
+    marginVertical: 20,
+  },
+});

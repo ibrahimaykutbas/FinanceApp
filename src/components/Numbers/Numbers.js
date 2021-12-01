@@ -24,10 +24,15 @@ const Numbers = ({theme = 'primary', onPress}) => {
         <Text style={styles[theme].number}>8</Text>
         <Text style={styles[theme].number}>9</Text>
       </View>
-      <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
-        <Finger />
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-evenly',
+          alignItems: 'center',
+        }}>
+        <Finger style={styles[theme].number} />
         <Text style={styles[theme].number}>0</Text>
-        <Back onPress={onPress ? onPress : null} />
+        <Back style={styles[theme].number} onPress={onPress ? onPress : null} />
       </View>
     </View>
   );
