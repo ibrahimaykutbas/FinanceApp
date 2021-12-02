@@ -3,7 +3,7 @@
 <img src="images/ss.jpeg" height="500"> <img src="images/ss1.jpeg" height="500"> <img src="images/ss2.jpeg" height="500">
 <img src="images/ss3.jpeg" height="500"> <img src="images/ss4.jpeg" height="500"> <img src="images/ss5.jpeg" height="500">
 <img src="images/ss6.jpeg" height="500"> <img src="images/ss7.jpeg" height="500"> <img src="images/ss8.jpeg" height="500">
-<img src="images/ss9.jpeg" height="500"> <img src="images/ss10.jpeg" height="500">
+<img src="images/ss9.jpeg" height="500">
 
 ## Kurulum
 
