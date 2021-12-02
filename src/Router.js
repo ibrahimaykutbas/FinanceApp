@@ -1,5 +1,4 @@
 import React from 'react';
-import {View, Text} from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -11,6 +10,9 @@ import Information from './pages/Login/Information/Information';
 import Pin from './pages/Login/Pin/Pin';
 import Home from './pages/Home/Home';
 import CardCenter from './pages/CardCenter/CardCenter';
+import InOut from './pages/InOut/InOut';
+import Profile from './pages/Profile/Profile';
+import Transaction from './pages/Transaction/Transaction';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +27,9 @@ const Router = () => {
         <Stack.Screen name="PinScreen" component={Pin} />
         <Stack.Screen name="HomeScreen" component={Home} />
         <Stack.Screen name="CardCenterScreen" component={CardCenter} />
+        <Stack.Screen name="InOutScreen" component={InOut} />
+        <Stack.Screen name="ProfileScreen" component={Profile} />
+        <Stack.Screen name="TransactionScreen" component={Transaction} />
       </Stack.Navigator>
     </NavigationContainer>
   );

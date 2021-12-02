@@ -14,14 +14,29 @@ const Home = ({navigation}) => {
     navigation.navigate('CardCenterScreen');
   };
 
+  const goInOut = () => {
+    navigation.navigate('InOutScreen');
+  };
+
+  const goProfile = () => {
+    navigation.navigate('ProfileScreen');
+  };
+
+  const goTransaction = () => {
+    navigation.navigate('TransactionScreen');
+  };
+
   return (
     <ScrollView style={styles.container}>
-      <Header />
+      <Header
+        goProfile={() => goProfile()}
+        goTransaction={() => goTransaction()}
+      />
       <TitleBar title="Card Center" onPress={() => goCardCenter()} />
       <CardCenter />
       <TitleBar title="Moneytory" />
       <Moneytory />
-      <TitleBar title="In & Out" />
+      <TitleBar title="In & Out" onPress={() => goInOut()} />
       <InOut />
     </ScrollView>
   );

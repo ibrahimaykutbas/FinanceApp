@@ -1,7 +1,8 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 
 import Notification from '../../../icons/notification.svg';
+import Profile from '../../../icons/profile.svg';
 import Send from '../../../icons/send.svg';
 import Request from '../../../icons/request.svg';
 import InOut from '../../../icons/inOut.svg';
@@ -9,7 +10,7 @@ import QR from '../../../icons/QR.svg';
 
 import styles from './Header.style';
 
-const Header = () => {
+const Header = ({goProfile, goTransaction}) => {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
@@ -23,34 +24,38 @@ const Header = () => {
             alignItems: 'center',
           }}>
           <Notification />
-          <Image style={styles.image} />
+          <TouchableOpacity style={styles.image} onPress={goProfile}>
+            <Profile />
+          </TouchableOpacity>
         </View>
       </View>
       <View style={styles.buttonsContainer}>
-        <View style={{alignItems: 'center'}}>
+        <TouchableOpacity
+          style={{alignItems: 'center'}}
+          onPress={goTransaction}>
           <View style={styles.buttonContainer}>
             <Send />
           </View>
           <Text>Send</Text>
-        </View>
-        <View style={{alignItems: 'center'}}>
+        </TouchableOpacity>
+        <TouchableOpacity style={{alignItems: 'center'}}>
           <View style={styles.buttonContainer}>
             <Request />
           </View>
           <Text>Request</Text>
-        </View>
-        <View style={{alignItems: 'center'}}>
+        </TouchableOpacity>
+        <TouchableOpacity style={{alignItems: 'center'}}>
           <View style={styles.buttonContainer}>
             <InOut />
           </View>
           <Text>In & Out</Text>
-        </View>
-        <View style={{alignItems: 'center'}}>
+        </TouchableOpacity>
+        <TouchableOpacity style={{alignItems: 'center'}}>
           <View style={styles.buttonContainer}>
             <QR />
           </View>
           <Text>QR Code</Text>
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
   );

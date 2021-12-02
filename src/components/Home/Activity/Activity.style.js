@@ -26,7 +26,7 @@ export default StyleSheet.create({
   },
   fee: {
     fontSize: 16,
-    color: '#000000',
+    color: '#DD1444',
     fontWeight: '500',
   },
   inFee: {

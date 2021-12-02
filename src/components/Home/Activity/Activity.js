@@ -23,7 +23,7 @@ const Activity = ({activity, date, fee, type}) => {
         </View>
       </View>
       <Text style={type ? styles.inFee : styles.fee}>
-        {type && '+ '}
+        {type ? '+ ' : '- '}
         {fee}
       </Text>
     </View>
